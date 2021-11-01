@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Autumn 2020 Question 2 (b)</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+	<h1> Autumn 2020 Question 2 (b)</h1>
+	<p>Prove the put-call parity formula \( S(t) + P (t) − C(t) = Ke^{ −r(T −t)}\) where r is the
+risk-free interest rate, and where \( S(t), P (t), C(t)\) are the time t prices of the stock,
+the put option, and the call option, respectively.</p>
+	<p><b>This is Theorem 7.1 in the book</b></p>
+
+</p>For a stock that pays no dividends the following relation holds between the
+prices of European call and put options, both with exercise price X and exercise
+time T :</p>
+<p>$$C^E - P^E = S(0) - Xe^{-rT}$$</p>
+
+<h3>Proof</h3>
+
+<p>Suppose that</p>
+<p>$$C^E - P^E > S(0) - Xe^{-rT}$$</p>
+<p> In this case an arbitrage strategy can be constructed as follows: At time 0</p>
+<ol>
+	<li>Buy one share for S(0)</li>
+	<li>Buy one put option for \(P^E\)</li>
+	<li>Write and sell one call option for \(C^E\)</li>
+	<li>Invest the sum \(C^E-P^E-S(0)\) (or borrow, if negative) on the money market at the interest rate \(r\).</li>
+</ol>
+<p>The balance of these transactions is 0. Then, at time \(T\)</p>
+<ol>
+	<li>Close out the money market position, collecting (or paying, if negative) the sum \((C^E-P^E-S(0))e^{rT}\)</li>
+	<li> Sell the share for X either by exercising the put if \(S(T)\leq X\) or settling the short position in calls if \(S(T) > X\).</li>
+</ol>
+<p>The balance will be  \((C^E-P^E-S(0))e^{rT} + X\), which is positive from what we have supposed at proof start, <b>Contradicting the No-Arbitrage Principle</b> </p>
+
+<p>Now suppose that</p>
+<p>$$C^E - P^E <  S(0) - Xe^{-rT}$$</p>
+
+<p>Then the following reverse strategy will result in arbitrage: At time 0</p>
+<ol>
+	<li>Sell short one share for S(0)</li>
+	<li>Write and sell a put option for \(P^E\)</li>
+	<li>Buy one call option for \(C^E\)</li>
+	<li>Invest the sum \(S(0)-C^E+P^E\) (or borrow, if negative) on the money market at the interest rate \(r\).</li>
+</ol>
+<p>The balance of these transaction is 0, at time \(T\)</p>
+<ol>
+	<li> Close out the money market position, collecting (or paying, if negative) the sum (\(S(0) - C^E + P^E)e^{rT}\)</li>
+	<li>Buy one share for \(X\) either by exercising the call is \(S(T) > X\) or setting the short psoition in puts if \(S(T) \leq X \) and close the short position in stock.</li>
+</ol>
+<h5>The balance will be \((S(0) - C^E + P^E)e^{rT}-X\), positive for this supposition, once again contradicting the No-Arbitrage Principle</h5>
+
+</body>
+</html>
