@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Autumn 2020 Question 1(d)</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+	<h1> Autumn 2020 Question 1(d)</h1>
+
+	<p><i>The current share price of a company is €50. The share price has volatility 20%.
+The risk-free interest rate is 5% per annum. Use the Black-Scholes Formula to
+compute the price of a European call option on the stock with strike price €53 that
+expires in three months’ time.</i><p>
+<p> The <b>Black-Scholes</b> Formula for a European Call Option on an asset whose price at time \(t\) is\( S(t)\) </p>
+<p>
+$$(C(t,S(t)) = S(t)\Phi(d_1) - Ke^{-r(T-t)}\Phi(d2)$$ </p>
+<p>
+Where \(K\) is the strike price, \(r\) is the continuously compounded risk-free interest rate, \(\sigma\) is the volatility of the asset, 
+</p>
+<p>
+$$d_1 = {log(S(t)/K)+(r+{1 \over 2}\sigma^2)(T-t) \over \sigma \sqrt{T-t}}$$
+</p>
+<p>\(d_2 = d_1 - \sigma \sqrt{T-t}\) and \(\Phi\) is the cumulative distribution function for the standard normal distribution </p>
+
+<h3> Figures for this question </h3>
+<p>$$\sigma = 0.2$$</p>
+<p>$$S(0) = €50$$</p>
+<p>$$K = €53$$</p>
+<p>$$T-t = {3 \over 12}$$</p>
+
+<p> So for this question, \(d_1\) = </p>
+<p>$${ln({50 \over 53})+(0.05+{1 \over 2}0.2^2)({3 \over 12}) \over 0.2\sqrt{3 \over 12}}$$
+</p>
+<p>$$= -0.407689$$</p>
+<p>This subsequently means...</p>
+<p>$$d_2 = -0.407689 - 0.2\sqrt{3 \over 12} = -0.507689 $$</p>
+<p><b>We Return now to </b>\((C(t,S(t)) = S(t)\Phi(d_1) - Ke^{-r(T-t)}\Phi(d2)\)</p>
+<p>$$= 50\Phi(-0.40769) - 53e^{-0.05({3 \over 12})}\Phi(-0.506789)$$</p>
+<p><b>Using Log Tables</b></p>
+<p>$$=50(0.3409) -53(0.9876)(0.3050)$$</p>
+<p>$$=€1.08$$</p>
+</body>
+</html>
