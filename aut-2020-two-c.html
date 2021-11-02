@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Autumn 2020 Question 2(c)</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+	<h1>Autumn 2020 Question 2(c)</h1>
+	<p>Starting from the Black-Scholes formula for the price \(C(t)\) of a call option, use put-
+call parity to derive the Black-Scholes formula for the price \( P(t)\) of the corresponding
+put option.</p>
+	<p>
+$$(C(t,S(t)) = S(t)\Phi(d_1) - Ke^{-r(T-t)}\Phi(d2)$$ </p>
+	<p>Put-Call Parity tells us that \(S(t) + P (t) − C(t) = Ke^{ −r(T −t)}\)</p>
+	<p>From this, we can say  \(S(t) + P(t) − C(t,S(t)) = Ke^{ −r(T −t)}\)</p> 
+	<p>
+	$$S(t) + P(t) - (C(t,S(t)) = S(t) + P(t) -  S(t)\Phi(d_1) - Ke^{-r(T-t)}\Phi(d2) = Ke^{-r(T-t)} $$ </p>
+		<p>
+	$$ S(t)(1- \Phi(d_1)) + P(t)= Ke^{-r(T-t)}(1 + \Phi(d2)) $$ </p>
+		<p>$$P(t,S(t)) =  Ke^{-r(T-t)}(1 + \Phi(d2)) -  S(t)(1- \Phi(d_1)) $$ </p>	
+
+</body>
+</html>
